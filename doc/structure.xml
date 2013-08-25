@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="object/roomtype.php" hash="e982935378756ecf8a8235c51422fd9b" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Roomtype, it maps the ROOMTYPE database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Object</extends>
+      <name>Roomtype</name>
+      <full_name>\Roomtype</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Roomtype specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/hotel.php" hash="ed92fc6f1968729ea570ef27f1b57705" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Hotel, it maps the HOTEL database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Object</extends>
+      <name>Hotel</name>
+      <full_name>\Hotel</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Hotel specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/offering.php" hash="45fad1b06db800773d01deca1569eee7" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Offering, it maps the OFFERING database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Object</extends>
+      <name>Offering</name>
+      <full_name>\Offering</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Offering specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/object.php" hash="772312530f8340a3834fcf5548ca50f9" package="Default">
+    <docblock line="3">
+      <description>This file defines the class Object, parent of all raw data table, including
+CUSTOMER, HOTEL, ITEM, OFFERING, PACKAGE, ROOMTYPE.</description>
+      <long-description></long-description>
+      <tag line="3" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="global" line="15" package="Default">
+      <extends/>
+      <name>Object</name>
+      <full_name>\Object</full_name>
+      <docblock line="12">
+        <description>This class is the root of singular object.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="21" namespace="global" package="Default">
+        <name>$id</name>
+        <default>NULL</default>
+        <docblock line="17">
+          <description>Once the object been loaded, it stores the id of the object.</description>
+          <long-description></long-description>
+          <tag line="17" name="property" description="" type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="27" namespace="global" package="Default">
+        <name>$query_table</name>
+        <default>NULL</default>
+        <docblock line="23">
+          <description>Remembers the type of the object, i.e.</description>
+          <long-description>&lt;p&gt;the table related&lt;/p&gt;</long-description>
+          <tag line="23" name="property" description="" type="string" variable="$query_table">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="33" namespace="global" package="Default">
+        <name>$meta</name>
+        <default>array()</default>
+        <docblock line="29">
+          <description>Once the object been loaded, this stores all the meta key=&gt;value pairs</description>
+          <long-description></long-description>
+          <tag line="29" name="property" description="" type="array" variable="$meta">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="39" namespace="global" package="Default">
+        <name>$meta_extend</name>
+        <default>array()</default>
+        <docblock line="35">
+          <description>Once the object been loaded, this stores all the meta, as long as the meta information.</description>
+          <long-description></long-description>
+          <tag line="35" name="property" description="" type="array" variable="$meta_extend">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="41">
+          <description>Default constructor, load database instance.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="Default">
+        <name>create</name>
+        <full_name>create</full_name>
+        <docblock line="48">
+          <description>Create a new object</description>
+          <long-description></long-description>
+          <tag line="48" name="param" description="The array contains the property of the new object. The&#10;format is basically $meta_key=&gt;$value, for example, 'first_name'=&gt;'Peter'." type="array" variable="$attr">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="48" name="return" description="Return the new added object." type="Object">
+            <type by_reference="false">Object</type>
+          </tag>
+        </docblock>
+        <argument line="56">
+          <name>$attr</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="98" package="Default">
+        <name>load</name>
+        <full_name>load</full_name>
+        <docblock line="90">
+          <description>Load the object by ID.</description>
+          <long-description></long-description>
+          <tag line="90" name="param" description="The ID of the object been loaded." type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="90" name="return" description="Return this object. If the ID of the object his not NULL when load,&#10;this function just return the loaded object, and it will NOT load a new one." type="Object">
+            <type by_reference="false">Object</type>
+          </tag>
+        </docblock>
+        <argument line="98">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="117" package="Default">
+        <name>get</name>
+        <full_name>get</full_name>
+        <docblock line="109">
+          <description>Get the meta value of this object with key</description>
+          <long-description></long-description>
+          <tag line="109" name="param" description="The key of the meta record." type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="109" name="return" description="If request ID, then return an ID with type of integer,&#10;otherwise, return a string with the value of corresponding key." type="int|string">
+            <type by_reference="false">int</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="117">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="133" package="Default">
+        <name>getMeta</name>
+        <full_name>getMeta</full_name>
+        <docblock line="124">
+          <description>Get the meta information of this object</description>
+          <long-description></long-description>
+          <tag line="124" name="param" description="(default FALSE) Whether to return the extended version of&#10;meta data." type="bool" variable="$extended">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="124" name="return" description="When extended=TRUE, return extended version of the meta records with meta&#10;information, otherwise, return an array of all meta keys and values." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="133">
+          <name>$extended</name>
+          <default>FALSE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="155" package="Default">
+        <name>set</name>
+        <full_name>set</full_name>
+        <docblock line="140">
+          <description>Change the value in one field (key) of the object to a new value.</description>
+          <long-description>&lt;p&gt;Please pay attention, this
+function does NOT change the databse, it only stores the value in this Object, if you want to
+store your changes in the database, you have to call save();&lt;/p&gt;</long-description>
+          <tag line="140" name="param" description="The key of the meta record." type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="140" name="param" description="New value of the meta record." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="140" name="param" description="(default FALSE) Whether to forcefully set the value. When set&#10;to TRUE, the object will create the connection between itself and the meta, if originally it&#10;does not contain that meta record (insert). When set to FALSE by default, this function will work only&#10;when the meta record exists (update only). If it does not exist and force=FALSE, it will try&#10;to protect the database been accidentally changed." type="bool" variable="$force">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="140" name="return" description="This object." type="Object">
+            <type by_reference="false">Object</type>
+          </tag>
+        </docblock>
+        <argument line="155">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="155">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="155">
+          <name>$force</name>
+          <default>FALSE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="178" package="Default">
+        <name>save</name>
+        <full_name>save</full_name>
+        <docblock line="173">
+          <description>Save this object to database.</description>
+          <long-description></long-description>
+          <tag line="173" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="204" package="Default">
+        <name>drop</name>
+        <full_name>drop</full_name>
+        <docblock line="194">
+          <description>Drop the current object in the database immediately</description>
+          <long-description></long-description>
+          <tag line="194" name="param" description="(default FALSE) If set to true, this function will&#10;drop all records related to this meta in the OBJECT_has_meta table, and then drop&#10;the object itslef in the OBJECT table. If set to false, this function will only remove&#10;the object in the OBJECT table if no meta is linked to this object." type="bool" variable="$force">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="194" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="204">
+          <name>$force</name>
+          <default>FALSE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="232" package="Default">
+        <name>_load</name>
+        <full_name>_load</full_name>
+        <docblock line="227">
+          <description>The function that actrually load the information and fill the array.</description>
+          <long-description></long-description>
+          <tag line="227" name="return" description="This Meta object." type="\Meta">
+            <type by_reference="false">\Meta</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/package.php" hash="9aa0bc09d1307676c28585df447859a7" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Package, it maps the PACKAGE database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Object</extends>
+      <name>Package</name>
+      <full_name>\Package</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Package specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/customer.php" hash="f54ba97fd13cdf50170763a5e2f6e1de" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Customer, it maps the CUSTOMER database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Object</extends>
+      <name>Customer</name>
+      <full_name>\Customer</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Customer specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="object/item.php" hash="f7059dc4b16965ac32f122c18a841111" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Item, it maps the ITEM database.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="13" package="Default">
+      <extends>\Object</extends>
+      <name>Item</name>
+      <full_name>\Item</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Item specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="18" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="15">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="meta.php" hash="909893a30b6c51b03452c288b35ee0b6" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Meta, links to meta table.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends/>
+      <name>Meta</name>
+      <full_name>\Meta</full_name>
+      <docblock line="9">
+        <description>This class controls the meta table in the database system</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
+        <name>$meta_table</name>
+        <default>array()</default>
+        <docblock line="14">
+          <description>The array that stores meta value after load() function.</description>
+          <long-description></long-description>
+          <tag line="14" name="property" description="" type="array" variable="$meta_table">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="20">
+          <description>Default constructor, load database instance.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="Default">
+        <name>create</name>
+        <full_name>create</full_name>
+        <docblock line="27">
+          <description>Create a new meta record in the meta table.</description>
+          <long-description></long-description>
+          <tag line="27" name="param" description="The key of the meta record." type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="param" description="The label displayed in the frontend." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="param" description="The data type of this meta record, in MySQL format." type="string" variable="$datatype">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="param" description="Whether the value is a system value (1==true,0==false)." type="int" variable="$system">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="27" name="param" description="Whether this field is required in the frontend." type="int" variable="$required">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="27" name="param" description="The default value for this field." type="string" variable="$default">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="return" description="This Meta object." type="\Meta">
+            <type by_reference="false">\Meta</type>
+          </tag>
+        </docblock>
+        <argument line="39">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$datatype</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$system</name>
+          <default>1</default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$required</name>
+          <default>0</default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$default</name>
+          <default>"NULL"</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Default">
+        <name>load</name>
+        <full_name>load</full_name>
+        <docblock line="57">
+          <description>Load the content of meta to this Meta object.</description>
+          <long-description></long-description>
+          <tag line="57" name="param" description="The ID of the meta record or the KEY of the meta record." type="mixed" variable="$id_or_key">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="57" name="return" description="This Meta object." type="\Meta">
+            <type by_reference="false">\Meta</type>
+          </tag>
+        </docblock>
+        <argument line="64">
+          <name>$id_or_key</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="97" package="Default">
+        <name>get</name>
+        <full_name>get</full_name>
+        <docblock line="90">
+          <description>Get the value of a specific meta_key.</description>
+          <long-description></long-description>
+          <tag line="90" name="param" description="The field of the meta record" type="string" variable="$field">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="90" name="return" description="ID will returned as int, other value will return as string." type="int|string">
+            <type by_reference="false">int</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="97">
+          <name>$field</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="109" package="Default">
+        <name>set</name>
+        <full_name>set</full_name>
+        <docblock line="101">
+          <description>Update the value of the meta object</description>
+          <long-description></long-description>
+          <tag line="101" name="param" description="The field you want to update." type="string" variable="$field">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="101" name="param" description="The new value stores in this object." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="101" name="return" description="This meta object." type="\Meta">
+            <type by_reference="false">\Meta</type>
+          </tag>
+        </docblock>
+        <argument line="109">
+          <name>$field</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="109">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="134" package="Default">
+        <name>save</name>
+        <full_name>save</full_name>
+        <docblock line="129">
+          <description>Save the current state of the Meta to the database</description>
+          <long-description></long-description>
+          <tag line="129" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="162" package="Default">
+        <name>drop</name>
+        <full_name>drop</full_name>
+        <docblock line="152">
+          <description>Drop the current meta in the database immediately</description>
+          <long-description></long-description>
+          <tag line="152" name="param" description="(default FALSE) If set to true, this function will&#10;drop all records related to this meta in the OBJECT_has_meta table, and then drop&#10;the meta itslef in the meta table. If set to false, this function will only remove&#10;the meta in the meta table if no OBJECT is linked to this meta." type="bool" variable="$force">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="152" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="162">
+          <name>$force</name>
+          <default>FALSE</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="collection/offering_collection.php" hash="93652de356c408e57ac4ec2133d08c7e" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Offering_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Offering_collection</name>
+      <full_name>\Offering_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Offering_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="collection/hotel_collection.php" hash="4bada645317bf72d0e4f60381980978e" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Hotel_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Hotel_collection</name>
+      <full_name>\Hotel_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Hotel_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="collection/collection.php" hash="bca65473360f4fddd4d1c4e30f601311" package="Default">
+    <docblock line="2">
+      <description>This file has the class that controls all the objects as a collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="global" line="12" package="Default">
+      <extends/>
+      <name>Collection</name>
+      <full_name>\Collection</full_name>
+      <docblock line="9">
+        <description>This class is the root of plural objects as a collection.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="18" namespace="global" package="Default">
+        <name>$collection_type</name>
+        <default>NULL</default>
+        <docblock line="14">
+          <description>Defines the type of the objects in the collection.</description>
+          <long-description></long-description>
+          <tag line="14" name="property" description="" type="string" variable="$collection_type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="23" namespace="global" package="Default">
+        <name>$collection</name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>The array that actrually holds the objects</description>
+          <long-description></long-description>
+          <tag line="19" name="property" description="" type="array" variable="$collection">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="25">
+          <description>Default constructor, load database instance.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="Default">
+        <name>loadAll</name>
+        <full_name>loadAll</full_name>
+        <docblock line="33">
+          <description>Load all objects with the current type to this collection.</description>
+          <long-description>&lt;p&gt;If the collection is
+not empty, it will NOT reload the collection.&lt;/p&gt;</long-description>
+          <tag line="33" name="return" description="This collection." type="\Collection">
+            <type by_reference="false">\Collection</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="Default">
+        <name>getAll</name>
+        <full_name>getAll</full_name>
+        <docblock line="62">
+          <description>Return all the elements in the collection as an array</description>
+          <long-description></long-description>
+          <tag line="62" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="Default">
+        <name>get</name>
+        <full_name>get</full_name>
+        <docblock line="71">
+          <description>Get element according to the key, it can be value or anything else.</description>
+          <long-description></long-description>
+          <tag line="71" name="param" description="The key you want to search" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="71" name="param" description="If search by ID, it is an int. If&#10;you want to search by other key, it will be string." type="\mixed[int|\string]" variable="$value">
+            <type by_reference="false">\mixed[int</type>
+            <type by_reference="false">\string]</type>
+          </tag>
+          <tag line="71" name="return" description="If you search by ID, then it will return the&#10;object if found. If you search by other key of the element other than ID, it&#10;will return an array with all objects found." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="82">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="104" package="Default">
+        <name>append</name>
+        <full_name>append</full_name>
+        <docblock line="95">
+          <description>Append an object to this collection</description>
+          <long-description></long-description>
+          <tag line="95" name="param" description="The object that has the same type of the&#10;objects in this collection will be append to this collection. If the type does&#10;not match, it will do nothing and just return you the collection." type="mixed" variable="$object">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="95" name="return" description="This collection." type="\Collection">
+            <type by_reference="false">\Collection</type>
+          </tag>
+        </docblock>
+        <argument line="104">
+          <name>$object</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="122" package="Default">
+        <name>drop</name>
+        <full_name>drop</full_name>
+        <docblock line="111">
+          <description>Drop element from this collection</description>
+          <long-description></long-description>
+          <tag line="111" name="param" description="The way you want to find the object. You can find it&#10;by ID or by other key of the object." type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="111" name="param" description="If you want to drop by the ID of the&#10;element, put the ID here as an int, otherwise, put the key as string." type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="111" name="return" description="Return this object. If the ID of the object his not NULL when load,&#10;this function just return the loaded object, and it will NOT load a new one." type="Object">
+            <type by_reference="false">Object</type>
+          </tag>
+        </docblock>
+        <argument line="122">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="122">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="collection/customer_collection.php" hash="5d7d3005e2958fc7a941828f8c7afc26" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Customer_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Customer_collection</name>
+      <full_name>\Customer_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Customer_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="collection/package_collection.php" hash="8f639f46d386042ad2bab5d56a203eb5" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Package_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Package_collection</name>
+      <full_name>\Package_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Package_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="collection/roomtype_collection.php" hash="f2333648479744b98c5242ca4dcd2518" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Roomtype_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Roomtype_collection</name>
+      <full_name>\Roomtype_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Roomtype_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="collection/item_collection.php" hash="747641dc203d3cc19b9a0a3e2b4d6d3a" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Item_collection.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="12" package="Default">
+      <extends>\Collection</extends>
+      <name>Item_collection</name>
+      <full_name>\Item_collection</full_name>
+      <docblock line="9">
+        <description>This class defines the behaviours for Item_collection specifically</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="14">
+          <description>Default constructor from parent, load query table.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="adjustment.php" hash="8e0766c3e0246bc2097749916281c613" package="Default">
+    <docblock line="2">
+      <description>This file defines the class Adjustment</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Xinyun Zhou &lt;me@xyzhou.com&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="13" package="Default">
+      <extends/>
+      <name>Adjustment</name>
+      <full_name>\Adjustment</full_name>
+      <docblock line="9">
+        <description>This class controls adjustment table and do the calculation for
+a specific date.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" namespace="global" package="Default">
+        <name>$records</name>
+        <default>array()</default>
+        <docblock line="14">
+          <description>This array stores all the data of the adjustment table</description>
+          <long-description></long-description>
+          <tag line="14" name="property" description="" type="array" variable="$records">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="20">
+          <description>Default constructor, load the data to the object.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>getRate</name>
+        <full_name>getRate</full_name>
+        <docblock line="27">
+          <description>Input a date and the function will calculate the adjustment
+rate of that specific date.</description>
+          <long-description></long-description>
+          <tag line="27" name="param" description="The date to be calculate." type="string" variable="$date">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="return" description="Return 0 if error, float value if the&#10;date is correct." type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="36">
+          <name>$date</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="Default">
+        <name>create</name>
+        <full_name>create</full_name>
+        <docblock line="40">
+          <description>Create a new record in the adjustment table</description>
+          <long-description></long-description>
+          <tag line="40" name="param" description="The type of the adjustment rate, accept values&#10;are: MON, TUE, WED, THU, FRI, SAT, SUN, JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG,&#10;SEP, OCT, NOV, DEC for normal calendar days in the week or month of the year. If&#10;it is a special value, put SPC means special." type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="40" name="param" description="Only apply if it is a special (SPC) record, put&#10;NULL here otherwise." type="\date" variable="$start">
+            <type by_reference="false">\date</type>
+          </tag>
+          <tag line="40" name="param" description="Only apply if it is a special (SPC) record, put&#10;NULL here otherwise." type="\date" variable="$end">
+            <type by_reference="false">\date</type>
+          </tag>
+          <tag line="40" name="param" description="The adjust rate" type="float" variable="$rate">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="40" name="param" description="The priority of the record, heighest priority&#10;will be calculated first. If records with same heighest priority is found, then&#10;multiply all of them and then return the value." type="int" variable="$priority">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="40" name="return" description="This adjustment object." type="\Adjustment">
+            <type by_reference="false">\Adjustment</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="58">
+          <name>$start</name>
+          <default>NULL</default>
+          <type/>
+        </argument>
+        <argument line="58">
+          <name>$end</name>
+          <default>NULL</default>
+          <type/>
+        </argument>
+        <argument line="58">
+          <name>$rate</name>
+          <default>0</default>
+          <type/>
+        </argument>
+        <argument line="58">
+          <name>$priority</name>
+          <default>10</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="69" package="Default">
+        <name>drop</name>
+        <full_name>drop</full_name>
+        <docblock line="62">
+          <description>Drop the record value that has the ID of $id</description>
+          <long-description></long-description>
+          <tag line="62" name="param" description="" type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="62" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="69">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="80" package="Default">
+        <name>_load</name>
+        <full_name>_load</full_name>
+        <docblock line="73">
+          <description>Load all data in the table adjustment to the object, everytime
+this function will empty all records to make sure there is no
+duplication.</description>
+          <long-description></long-description>
+          <tag line="73" name="return" description="" type="\Adjustment">
+            <type by_reference="false">\Adjustment</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

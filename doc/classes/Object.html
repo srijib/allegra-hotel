@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Object</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Default constructor, load database instance."><span class="description">Default constructor, load database instance.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_create" title="create :: Create a new object"><span class="description">Create a new object</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#method_drop" title="drop :: Drop the current object in the database immediately"><span class="description">Drop the current object in the database immediately</span><pre>drop()</pre></a></li>
+<li class="method public "><a href="#method_get" title="get :: Get the meta value of this object with key"><span class="description">Get the meta value of this object with key</span><pre>get()</pre></a></li>
+<li class="method public "><a href="#method_getMeta" title="getMeta :: Get the meta information of this object"><span class="description">Get the meta information of this object</span><pre>getMeta()</pre></a></li>
+<li class="method public "><a href="#method_load" title="load :: Load the object by ID."><span class="description">Load the object by ID.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#method_save" title="save :: Save this object to database."><span class="description">Save this object to database.</span><pre>save()</pre></a></li>
+<li class="method public "><a href="#method_set" title="set :: Change the value in one field (key) of the object to a new value."><span class="description">Change the value in one field (key) of the object to a new value.</span><pre>set()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method__load" title="_load :: The function that actrually load the information and fill the array."><span class="description">The function that actrually load the information and fill the array.</span><pre>_load()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_id" title="$id :: Once the object been loaded, it stores the id of the object."><span class="description"></span><pre>$id</pre></a></li>
+<li class="property protected "><a href="#property_meta" title="$meta :: Once the object been loaded, this stores all the meta key=&gt;value pairs"><span class="description"></span><pre>$meta</pre></a></li>
+<li class="property protected "><a href="#property_meta_extend" title="$meta_extend :: Once the object been loaded, this stores all the meta, as long as the meta information."><span class="description"></span><pre>$meta_extend</pre></a></li>
+<li class="property protected "><a href="#property_query_table" title="$query_table :: Remembers the type of the object, i.e."><span class="description"></span><pre>$query_table</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Object"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Object.html">Object</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">This class is the root of singular object.</p>
+<div class="details">
+<div class="long_description"></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Default constructor, load database instance.</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
+<h2>Create a new object</h2>
+<pre>create(array $attr) : Object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$attr</h4>
+<code>array</code><p>The array contains the property of the new object. The
+format is basically $meta_key=>$value, for example, 'first_name'=>'Peter'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Object</code>Return the new added object.</div>
+</div></div>
+</div>
+<a id="method_drop"></a><div class="element clickable method public method_drop" data-toggle="collapse" data-target=".method_drop .collapse">
+<h2>Drop the current object in the database immediately</h2>
+<pre>drop(bool $force) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>bool</code><p>(default FALSE) If set to true, this function will
+drop all records related to this meta in the OBJECT_has_meta table, and then drop
+the object itslef in the OBJECT table. If set to false, this function will only remove
+the object in the OBJECT table if no meta is linked to this object.</p>
+</div>
+</div></div>
+</div>
+<a id="method_get"></a><div class="element clickable method public method_get" data-toggle="collapse" data-target=".method_get .collapse">
+<h2>Get the meta value of this object with key</h2>
+<pre>get(string $key) : int | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The key of the meta record.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>string</code>If request ID, then return an ID with type of integer,
+otherwise, return a string with the value of corresponding key.</div>
+</div></div>
+</div>
+<a id="method_getMeta"></a><div class="element clickable method public method_getMeta" data-toggle="collapse" data-target=".method_getMeta .collapse">
+<h2>Get the meta information of this object</h2>
+<pre>getMeta(bool $extended) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$extended</h4>
+<code>bool</code><p>(default FALSE) Whether to return the extended version of
+meta data.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>When extended=TRUE, return extended version of the meta records with meta
+information, otherwise, return an array of all meta keys and values.</div>
+</div></div>
+</div>
+<a id="method_load"></a><div class="element clickable method public method_load" data-toggle="collapse" data-target=".method_load .collapse">
+<h2>Load the object by ID.</h2>
+<pre>load(int $id) : Object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The ID of the object been loaded.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Object</code>Return this object. If the ID of the object his not NULL when load,
+this function just return the loaded object, and it will NOT load a new one.</div>
+</div></div>
+</div>
+<a id="method_save"></a><div class="element clickable method public method_save" data-toggle="collapse" data-target=".method_save .collapse">
+<h2>Save this object to database.</h2>
+<pre>save() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set"></a><div class="element clickable method public method_set" data-toggle="collapse" data-target=".method_set .collapse">
+<h2>Change the value in one field (key) of the object to a new value.</h2>
+<pre>set(string $key, string $value, bool $force) : Object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Please pay attention, this
+function does NOT change the databse, it only stores the value in this Object, if you want to
+store your changes in the database, you have to call save();</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The key of the meta record.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>New value of the meta record.</p></div>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>bool</code><p>(default FALSE) Whether to forcefully set the value. When set
+to TRUE, the object will create the connection between itself and the meta, if originally it
+does not contain that meta record (insert). When set to FALSE by default, this function will work only
+when the meta record exists (update only). If it does not exist and force=FALSE, it will try
+to protect the database been accidentally changed.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Object</code>This object.</div>
+</div></div>
+</div>
+<a id="method__load"></a><div class="element clickable method private method__load" data-toggle="collapse" data-target=".method__load .collapse">
+<h2>The function that actrually load the information and fill the array.</h2>
+<pre>_load() : <a href="../classes/Meta.html">\Meta</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Meta.html">\Meta</a></code>This Meta object.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_id"> </a><div class="element clickable property protected property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2></h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>property</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_meta"> </a><div class="element clickable property protected property_meta" data-toggle="collapse" data-target=".property_meta .collapse">
+<h2></h2>
+<pre>$meta </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>property</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_meta_extend"> </a><div class="element clickable property protected property_meta_extend" data-toggle="collapse" data-target=".property_meta_extend .collapse">
+<h2></h2>
+<pre>$meta_extend </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>property</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_query_table"> </a><div class="element clickable property protected property_query_table" data-toggle="collapse" data-target=".property_query_table .collapse">
+<h2></h2>
+<pre>$query_table </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>the table related</p></div>
+<table class="table table-bordered"><tr>
+<th>property</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-24T00:30:29+10:00.<br></footer></div>
+</div>
+</body>
+</html>
